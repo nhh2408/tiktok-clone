@@ -1,0 +1,3 @@
+  - border-box: thuộc tính width và height sẽ tự động bao gồm luôn content, padding và border, còn chiều rộng của content sẽ tự động co giãn tương ứng nếu chúng ta thay đổi padding và border, đảm bảo kích thước của cả element sẽ không thay đổi, đồng nghĩa với việc layout tổng sẽ không thay đổi.
+
+  - Fragment trong ReactJS giúp bạn tạo ra các nhóm phần tử JSX mà không cần tạo thêm phần tử DOM trong cây DOM thực tế.
