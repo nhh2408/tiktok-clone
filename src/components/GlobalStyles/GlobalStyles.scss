@@ -3,10 +3,19 @@
 
 :root {
   --primary: #fe2c55;
+  --white: #ffffff;
+  --shadow: 0px 1px 1px rgba(255, 255, 255, 0.12);
+
+  // Default Layout
+  --default-layout-header-height: 60px;
 }
 
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -18,4 +27,13 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgb(18, 18, 18);
+  min-height: 100vh;
+}
+
+button,
+input {
+  outline: none;
+  border: none;
 }
