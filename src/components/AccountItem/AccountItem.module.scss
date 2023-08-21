@@ -1,0 +1,40 @@
+.search-item {
+  padding: 0.9rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  -webkit-box-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .info {
+    flex: 1;
+  }
+
+  .username {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    .tick {
+      color: rgb(32, 213, 236);
+      background-color: var(--white);
+      border-radius: 50%;
+    }
+  }
+
+  .name {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
