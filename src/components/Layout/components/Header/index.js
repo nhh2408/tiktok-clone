@@ -1,17 +1,10 @@
 import { useEffect, useState } from "react";
 import classNames from "classnames/bind";
-import {
-  FaSistrix,
-  FaCircleXmark,
-  FaPlus,
-  FaRegPaperPlane,
-  FaRegMessage,
-  FaSpinner,
-  FaUserLarge,
-} from "react-icons/fa6";
+import { FaSistrix, FaCircleXmark, FaSpinner, FaPlus } from "react-icons/fa6";
 import Tippy from "@tippyjs/react/headless";
 import "tippy.js/dist/tippy.css";
 
+import Button from "~/components/Button";
 import AccountItem from "~/components/AccountItem";
 import { PopperWrapper } from "~/components/Popper";
 import styles from "./Header.module.scss";
@@ -69,27 +62,10 @@ function Header() {
           </div>
         </Tippy>
         <div className={cx("actions")}>
-          <button className={cx("btn-upload")}>
-            <FaPlus />
-            <span>Upload</span>
-          </button>
-          <Tippy content="Messages">
-            {/* eslint-disable-next-line */}
-            <a href="#" className={cx("btn-message")}>
-              <FaRegPaperPlane />
-            </a>
-          </Tippy>
-          <Tippy content="Inbox">
-            {/* eslint-disable-next-line */}
-            <a href="#" className={cx("btn-mailbox")}>
-              <FaRegMessage />
-              <span>3</span>
-            </a>
-          </Tippy>
-          {/* eslint-disable-next-line */}
-          <a href="#" className={cx("btn-account")}>
-            <FaUserLarge />
-          </a>
+          <Button upload icon={<FaPlus />}>
+            Upload
+          </Button>
+          <Button primary>Log in</Button>
         </div>
       </div>
     </header>

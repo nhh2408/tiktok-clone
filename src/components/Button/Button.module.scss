@@ -1,0 +1,88 @@
+.button {
+  font-size: 1.6rem;
+  min-width: 100px;
+  font-weight: 700;
+  padding: 9px;
+  border-radius: 4px;
+  letter-spacing: 0.03px;
+  background-color: transparent;
+  cursor: pointer;
+  user-select: none;
+
+  + .button {
+    margin-left: 16px;
+  }
+
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+// Style
+.rounded {
+  min-width: 90px;
+  padding: 7px 9px;
+  color: rgba(255, 255, 255, 0.75);
+  border-radius: 5.2rem;
+  background-color: rgba(37, 37, 37, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+  &:hover {
+    background-color: rgba(46, 46, 46, 1);
+  }
+}
+
+.primary {
+  color: var(--white);
+  background-color: var(--primary);
+
+  &:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),
+      #fe2c55;
+  }
+}
+
+.outline {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background-color: transparent;
+
+  &:hover {
+    background-color: var(--btn-outline-hover);
+  }
+}
+
+.outline2 {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background-color: rgba(255, 255, 255, 0.08);
+
+  &:hover {
+    background-color: var(--btn-outline-hover);
+  }
+}
+
+.upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+  gap: 7px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+  }
+}
+
+// Size
+.small {
+  min-width: 96px;
+  padding: 8px 9px;
+}
+
+.large {
+  padding: 14px 9px;
+}

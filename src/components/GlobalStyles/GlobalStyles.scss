@@ -2,8 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --primary: #fe2c55;
+  --primary: rgba(255, 59, 92, 1);
   --white: #ffffff;
+  --btn-outline-hover: rgba(255, 59, 92, 0.08);
   --shadow: 0px 1px 1px rgba(255, 255, 255, 0.12);
 
   // Default Layout
