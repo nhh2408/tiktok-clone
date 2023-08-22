@@ -12,10 +12,10 @@ import "tippy.js/dist/tippy.css";
 
 import Button from "~/components/Button";
 import AccountItem from "~/components/AccountItem";
-import { PopperWrapper } from "~/components/Popper";
+import { Wrapper as PopperWrapper } from "~/components/Popper";
 import styles from "./Header.module.scss";
 import images from "~/assets/images";
-import MenuSetting from "~/components/Popper/MenuSetting";
+import MenuSetting from "~/components/MenuSetting";
 
 const cx = classNames.bind(styles);
 
@@ -33,10 +33,10 @@ const SETTING_ITEMS = [
     icon: <img src={images.keyboardIcon} alt="keyboard icon" />,
     title: "Keyboard shortcuts",
   },
-  // {
-  //   icon: <img src={images.moonIcon} alt="moon icon" />,
-  //   title: "Dark mode",
-  // },
+  {
+    icon: <img src={images.moonIcon} alt="moon icon" />,
+    title: "Dark mode",
+  },
 ];
 
 function Header() {
@@ -82,9 +82,10 @@ function Header() {
                 <FaSpinner className={cx("loading")} />
               </div>
               <span className={cx("separate")}></span>
-              <button className={cx("btn-search")}>
+              {/* eslint-disable-next-line */}
+              <a className={cx("btn-search")}>
                 <FaSistrix />
-              </button>
+              </a>
             </form>
           </div>
         </Tippy>
@@ -93,11 +94,22 @@ function Header() {
             Upload
           </Button>
           <Button primary>Log in</Button>
-          <MenuSetting data={SETTING_ITEMS}>
+          <Tippy
+            render={(attrs) => (
+              <div className={cx("setting-list")} tabIndex={-1} {...attrs}>
+                <PopperWrapper>
+                  <MenuSetting data={SETTING_ITEMS} />
+                </PopperWrapper>
+              </div>
+            )}
+            placement="bottom"
+            interactive={true}
+          >
+            {/* eslint-disable-next-line */}
             <button className={cx("icon-setting")}>
               <FaEllipsisVertical />
             </button>
-          </MenuSetting>
+          </Tippy>
         </div>
       </div>
     </header>

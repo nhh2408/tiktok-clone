@@ -127,4 +127,13 @@
     background-color: transparent;
     cursor: pointer;
   }
+  .setting-list {
+    min-width: 224px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgb(37, 37, 37);
+    border-radius: 10px;
+    margin-top: 4px;
+  }
 }
