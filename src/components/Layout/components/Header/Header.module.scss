@@ -116,4 +116,15 @@
 .actions {
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  .icon-setting {
+    position: relative;
+    margin-left: 16px;
+    font-size: 2rem;
+    line-height: 10px;
+    color: var(--white);
+    background-color: transparent;
+    cursor: pointer;
+  }
 }

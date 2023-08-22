@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import classNames from "classnames/bind";
-import { FaSistrix, FaCircleXmark, FaSpinner, FaPlus } from "react-icons/fa6";
+import {
+  FaSistrix,
+  FaCircleXmark,
+  FaSpinner,
+  FaPlus,
+  FaEllipsisVertical,
+} from "react-icons/fa6";
 import Tippy from "@tippyjs/react/headless";
 import "tippy.js/dist/tippy.css";
 
@@ -9,8 +15,29 @@ import AccountItem from "~/components/AccountItem";
 import { PopperWrapper } from "~/components/Popper";
 import styles from "./Header.module.scss";
 import images from "~/assets/images";
+import MenuSetting from "~/components/Popper/MenuSetting";
 
 const cx = classNames.bind(styles);
+
+const SETTING_ITEMS = [
+  {
+    icon: <img src={images.languageIcon} alt="language icon" />,
+    title: "English",
+  },
+  {
+    icon: <img src={images.helpIcon} alt="help icon" />,
+    title: "Feedback and help",
+    to: "/feedback",
+  },
+  {
+    icon: <img src={images.keyboardIcon} alt="keyboard icon" />,
+    title: "Keyboard shortcuts",
+  },
+  // {
+  //   icon: <img src={images.moonIcon} alt="moon icon" />,
+  //   title: "Dark mode",
+  // },
+];
 
 function Header() {
   const [searchResult, setSearchResult] = useState([]);
@@ -66,6 +93,11 @@ function Header() {
             Upload
           </Button>
           <Button primary>Log in</Button>
+          <MenuSetting data={SETTING_ITEMS}>
+            <button className={cx("icon-setting")}>
+              <FaEllipsisVertical />
+            </button>
+          </MenuSetting>
         </div>
       </div>
     </header>
