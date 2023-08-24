@@ -42,3 +42,54 @@ input {
 li {
   list-style: none;
 }
+
+a {
+  text-decoration: none;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(26, 26, 26, 1);
+  border-radius: 10px;
+}
+
+// Custom tippy tooltip
+#tippy-5,
+#tippy-6 {
+  pointer-events: none;
+  z-index: 9999;
+  visibility: visible;
+  position: absolute;
+  inset: 0px auto auto 0px;
+  margin: 0px;
+  transform: translate3d(1281px, 52.8px, 0px);
+}
+.tippy-box {
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.7rem;
+  line-height: 2.1rem;
+  letter-spacing: 0.03px;
+  background-color: rgba(84, 84, 84, 0.92);
+  color: var(--white);
+
+  .tippy-content {
+    position: relative;
+    padding: 8px;
+    z-index: 1;
+  }
+
+  .tippy-arrow {
+    width: 16px;
+    height: 16px;
+    color: rgba(84, 84, 84, 0.92);
+    r: #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate3d(35.8px, 0px, 0px);
+  }
+}

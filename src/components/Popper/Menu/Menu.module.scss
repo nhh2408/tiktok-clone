@@ -1,0 +1,60 @@
+.menu-list {
+  width: 224px;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgb(37, 37, 37);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 16px;
+  transition: opacity 300ms ease 0s;
+}
+
+.menu-popper {
+  margin: 4px 0;
+  padding: 8px 0;
+}
+
+// Menu items
+.menu-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgb(37, 37, 37);
+  padding: 10px 8px 10px 16px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+  }
+}
+
+.item-link {
+  margin-left: 8px;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.header {
+  position: relative;
+  height: 50px;
+  margin-top: -8px;
+}
+
+.back-btn {
+  width: 50px;
+  height: 100%;
+  color: var(--white);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.separate {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
