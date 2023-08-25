@@ -1,3 +1,19 @@
   - border-box: thuộc tính width và height sẽ tự động bao gồm luôn content, padding và border, còn chiều rộng của content sẽ tự động co giãn tương ứng nếu chúng ta thay đổi padding và border, đảm bảo kích thước của cả element sẽ không thay đổi, đồng nghĩa với việc layout tổng sẽ không thay đổi.
 
   - Fragment trong ReactJS giúp bạn tạo ra các nhóm phần tử JSX mà không cần tạo thêm phần tử DOM trong cây DOM thực tế.
+
+  - Cấu trúc của 1 URL:
+  https://tiktok.fullstack.edu.vn/api/users/search?q=n&type=less
+    + https: protocol (giao thức)
+    + tiktok.fullstack.edu.vn: hostname
+    + api/users/search: path
+    + ?: ngăn cách giữa toàn bộ phía trước của nó và query parameters
+    + q=n&type=less: Query parameters
+  - Query parameters:
+    + Dùng để lưu dữ liệu gì đó ở phía front-end
+    + Gửi cho back-end
+
+    + Sử dụng theo "key=value" (cặp khóa và giá trị)
+    + Nếu có nhiều dữ liệu sẽ ngăn cách bằng dấu và "key=value&key=value"
+
+  _ "encodeURIComponent": là một hàm được sử dụng để mã hóa một chuỗi thành một dạng phù hợp để sử dụng trong các URL. Khi bạn muốn bao gồm các ký tự đặc biệt hoặc ký tự không được phép trong một URL, bạn cần mã hóa chúng để đảm bảo tính đúng đắn và an toàn của URL.
