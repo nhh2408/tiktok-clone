@@ -17,3 +17,7 @@
     + Nếu có nhiều dữ liệu sẽ ngăn cách bằng dấu và "key=value&key=value"
 
   _ "encodeURIComponent": là một hàm được sử dụng để mã hóa một chuỗi thành một dạng phù hợp để sử dụng trong các URL. Khi bạn muốn bao gồm các ký tự đặc biệt hoặc ký tự không được phép trong một URL, bạn cần mã hóa chúng để đảm bảo tính đúng đắn và an toàn của URL.
+
+  - Khi có 1 hành động xảy ra liên tục nhưng chỉ muốn lấy hành động sau cùng thì sử dụng debounce
+
+  - Trong hàm useDebounce, mỗi khi value trong mảng deps thay đổi thì clearnup function được gọi, nên sẽ clear timeout trước đó đi (huỷ những lần trước đi). Vì vậy, cho tới khi người dùng ngừng gõ 500ms API mới được gọi
