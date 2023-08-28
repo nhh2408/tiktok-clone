@@ -1,5 +1,6 @@
+import config from "~/config";
 // Layouts
-import { HeaderOnly } from "~/components/Layout";
+import { HeaderOnly } from "~/layouts";
 // Pages
 import Home from "~/pages/Home";
 import Following from "~/pages/Following";
@@ -9,24 +10,24 @@ import Search from "~/pages/Search";
 // Public Routes là khi không cần đăng nhập vẫn có thể xem
 export const publicRoutes = [
   {
-    path: "/",
+    path: config.routes.home,
     component: Home,
   },
   {
-    path: "/following",
+    path: config.routes.following,
     component: Following,
   },
   {
-    path: "/:nickname",
+    path: config.routes.profile,
     component: Profile,
   },
   {
-    path: "/upload",
+    path: config.routes.upload,
     component: Upload,
     layout: HeaderOnly,
   },
   {
-    path: "/search",
+    path: config.routes.search,
     component: Search,
     layout: null,
   },

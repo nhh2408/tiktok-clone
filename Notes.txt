@@ -21,3 +21,8 @@
   - Khi có 1 hành động xảy ra liên tục nhưng chỉ muốn lấy hành động sau cùng thì sử dụng debounce
 
   - Trong hàm useDebounce, mỗi khi value trong mảng deps thay đổi thì clearnup function được gọi, nên sẽ clear timeout trước đó đi (huỷ những lần trước đi). Vì vậy, cho tới khi người dùng ngừng gõ 500ms API mới được gọi
+
+  - instance: là thực thể được tạo ra bởi constructor (đối tượng đc tạo ra bởi class)
+    + Ex: const a = [1, 2, 3, 4]
+    a là instance của Array
+    a instanceOf Array => true
