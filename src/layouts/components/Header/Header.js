@@ -131,7 +131,9 @@ function Header() {
               <Button upload icon={<FaPlus />}>
                 Upload
               </Button>
-              <Button primary>Log in</Button>
+              <Button primary to="/">
+                Log in
+              </Button>
             </>
           )}
 

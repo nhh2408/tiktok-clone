@@ -2,7 +2,6 @@
   font-size: 1.6rem;
   min-width: 100px;
   font-weight: 700;
-  padding: 9px;
   border-radius: 4px;
   letter-spacing: 0.03px;
   background-color: transparent;
@@ -21,6 +20,7 @@
 
 // Style
 .rounded {
+  text-align: center;
   min-width: 90px;
   padding: 7px 9px;
   color: rgba(255, 255, 255, 0.75);
@@ -33,7 +33,17 @@
   }
 }
 
+.outline,
+.outline2 {
+  text-align: center;
+  padding: 5px;
+  font-size: 1.7rem;
+}
+
 .primary {
+  padding: 5px;
+  font-size: 1.7rem;
+  text-align: center;
   color: var(--white);
   background-color: var(--primary);
 
@@ -64,6 +74,7 @@
 }
 
 .upload {
+  padding: 9px;
   display: flex;
   align-items: center;
   justify-content: center;
