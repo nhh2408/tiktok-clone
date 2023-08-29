@@ -2,11 +2,12 @@ import config from "~/config";
 // Layouts
 import { HeaderOnly } from "~/layouts";
 // Pages
-import Home from "~/pages/Home";
+import Home from "~/pages/Home/Home";
 import Following from "~/pages/Following";
 import Profile from "~/pages/Profile";
 import Upload from "~/pages/Upload";
 import Search from "~/pages/Search";
+import Live from "~/pages/Live";
 // Public Routes là khi không cần đăng nhập vẫn có thể xem
 export const publicRoutes = [
   {
@@ -30,6 +31,10 @@ export const publicRoutes = [
     path: config.routes.search,
     component: Search,
     layout: null,
+  },
+  {
+    path: config.routes.live,
+    component: Live,
   },
 ];
 // Private Routes là khi phải đăng nhập mới có thể xem
